@@ -2,6 +2,38 @@ doctype html
 html
   head
     title Breno Souza
+    meta(charset='UTF-8')
+    link(rel='shortcut icon' type='image/png' href='images/favicon.png')
+    link(rel='stylesheet' type='text/css' href='css/style.css')
+    link(rel='import' href='https://www.polymer-project.org/0.5/components/paper-ripple/paper-ripple.html')
   
   body
     
+    audio(id='rain' controls autoplay loop)
+      source(src='audios/rain.mp3' type='audio/mpeg')
+      Your browser does not support the audio element.
+
+    profile
+      img(id='cover'   src='images/cover.jpg'   alt='foto de capa')
+      img.shadow(id='profile' src='images/profile.png' alt='foto de perfil')  
+      figcaption Breno Souza
+    
+    content.shadow
+      article
+        header
+          h1 Sobre
+          p
+            strong Bacharel no curso de Engenharia de Computação pelo CEFET-MG
+            br
+            | Entusiasta na área da Engenharia de Software, principalmente no temas
+            | relacionados à Manutenção e a Evolução de Software. Tem forte desejo
+            | de facilitar a análise de execução de programas.
+        p
+          strong MEAN Stack developer
+          br
+          | Fascinado pelo avanço das tecnologias Web nos últimos anos, adotou como
+          | hobbie o desenvolvimento de aplicações com MEAN Stack.
+    
+    div.button.wider.raised.darkgreen.center
+      div.center.bold(fit) Portifólio
+      paper-ripple(fit)
