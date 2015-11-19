@@ -65,12 +65,12 @@ img#profile {
 }
 
 img#profile + figcaption {
-  position: relative;
-  text-align: center;
   top: 7.5vh;
-  font-weight: bolder;
   font-size: 2em;
   line-height: 2.5em;
+  position: relative;
+  text-align: center;
+  font-weight: bolder;
   font-family: 'Libre Baskerville', serif;
 }
 
@@ -78,17 +78,51 @@ img#profile + figcaption {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
+header {
+  z-index: 10;
+  width: 100%;
+  position: fixed;
+  background-color: #4d8a5a;
+}
+
+section {
+  position: relative;
+  top: calc(200px + 20vh);
+}
+
+languages {
+  position: fixed;
+  z-index: 10;
+  right: 20px;
+  top: 20px;
+}
+
+languages img {
+  width: 32px;
+  cursor: pointer;
+  transition: all .25s ease-in-out;
+}
+
+languages img:hover {
+  cursor: pointer;
+  transition: all .25s ease-in-out;
+  transform: scale(1.75);
+}
+
+languages img:nth-child(even) {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
 content {
   width: 90vw;
   display: block;
   overflow-y: auto;
-  margin-top: 10vh;
-  margin-bottom: 30px;
   max-width: 800px;
   max-height: 50vh;
-  min-height: 300px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
   box-sizing: border-box;
   background-color: #fcfcfc;
   padding: 8px 32px 8px 32px;
@@ -109,37 +143,79 @@ div.center {
   font-weight: bolder;
 }
 
+menu {
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  margin-top: 10vh;
+  width: 100%;
+  padding: 0;
+}
+
+item:nth-child(even) {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+item:last-child {
+  margin-right: 0px;
+}
+
+item i {
+  float: left;
+  margin-top: 4px;
+  margin-left: 18px;
+}
+
+div.button.narrow {
+  max-width: 60px;
+  overflow: hidden;
+  white-space:nowrap;
+  transition: max-width .25s ease-out .1s;
+}
+
+div.button.narrow:hover {
+  max-width: 240px;
+  transition: max-width .5s ease-out .1s;
+}
+
+div.button.narrow span {
+  opacity: 0;
+  margin-left: 48px;
+  margin-right: 18px;
+  font-weight: bolder;
+  transition: opacity .1s ease-out .1s;
+}
+
+div.button.narrow:hover span {
+  opacity: 1;
+  display: inline;
+  transition: opacity .1s ease-out .1s;
+}
+
 /* Button */
 .button {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-touch-callout: none;
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  width: 120px;
-  height: 32px;
-  line-height: 32px;
-  border-radius: 2px;
-  font-size: 0.9em;
   background-color: #fff;
   color: #646464;
-}
-
-.button.wider {
-  width: 240px;
+  position: relative;
+  display: inline-block;
+  line-height: 32px;
+  font-size: 0.9em;
+  cursor: pointer;
+  border-radius: 2px;
+  min-width: 60px;
+  height: 32px;
 }
 
 .button > paper-ripple {
   border-radius: 2px;
   overflow: hidden;
-}
-
-.button.narrow {
-  width: 60px;
 }
 
 .grey {
@@ -148,6 +224,11 @@ div.center {
 
 .blue {
   background-color: #4285f4;
+  color: #fff;
+}
+
+.darkgrey {
+  background-color: #444;
   color: #fff;
 }
 
@@ -162,8 +243,8 @@ div.center {
 }
 
 .button.raised {
-  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0.2s;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 

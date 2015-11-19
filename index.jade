@@ -5,22 +5,75 @@ html
     meta(charset='UTF-8')
     link(rel='shortcut icon' type='image/png' href='images/favicon.png')
     link(rel='stylesheet' type='text/css' href='css/style.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons')
     link(rel='import' href='https://www.polymer-project.org/0.5/components/paper-ripple/paper-ripple.html')
   
   body
-    
-    audio(id='rain' controls autoplay loop)
-      source(src='audios/rain.mp3' type='audio/mpeg')
-      Your browser does not support the audio element.
 
-    profile
-      img(id='cover'   src='images/cover.jpg'   alt='foto de capa')
-      img.shadow(id='profile' src='images/profile.png' alt='foto de perfil')  
-      figcaption Breno Souza
+    header.shadow
     
-    content.shadow
-      article
-        header
+      languages
+        img(src='images/flags/br.png')
+        img(src='images/flags/us.png')
+        img(src='images/flags/jp.png')
+    
+      profile
+        img(id='cover' src='images/cover.jpg' alt='foto de capa')
+        img.shadow(id='profile' src='images/profile.png' alt='foto de perfil')  
+        figcaption Breno Souza
+      
+      nav
+        menu
+          item
+            div.button.narrow.raised.darkgrey
+              span Sobre
+              div.center.bold(fit)
+                i.material-icons person
+              paper-ripple(fit)
+          item
+            a(href='mailto:breno.mccs@gmail.com')
+              div.button.narrow.raised.grey
+                span breno.mccs@gmail.com
+                div.center.bold(fit)
+                  i.material-icons mail
+                paper-ripple(fit)
+          item
+            a(href='https://github.com/brenomccs')
+              div.button.narrow.raised.grey
+                span Github
+                div.center.bold(fit)
+                  i.material-icons code
+                paper-ripple(fit)
+          item
+            a(href='files/resume pt-br.pdf' target='blank')
+              div.button.narrow.raised.grey
+                span Currículo
+                div.center.bold(fit)
+                  i.material-icons insert_drive_file
+                paper-ripple(fit)
+          item
+            div.button.narrow.raised.grey
+              span Portifólio
+              div.center.bold(fit)
+                i.material-icons assignment_turned_in
+              paper-ripple(fit)
+          item
+            div.button.narrow.raised.grey
+              span Artigos
+              div.center.bold(fit)
+                i.material-icons assignment
+              paper-ripple(fit)
+          item
+            div.button.narrow.raised.grey
+              span Bibliografia Consultada
+              div.center.bold(fit)
+                i.material-icons book
+              paper-ripple(fit)
+    
+    section
+      
+      content.shadow
+        article
           h1 Sobre
           p
             strong Bacharel no curso de Engenharia de Computação pelo CEFET-MG
@@ -28,12 +81,8 @@ html
             | Entusiasta na área da Engenharia de Software, principalmente no temas
             | relacionados à Manutenção e a Evolução de Software. Tem forte desejo
             | de facilitar a análise de execução de programas.
-        p
-          strong MEAN Stack developer
-          br
-          | Fascinado pelo avanço das tecnologias Web nos últimos anos, adotou como
-          | hobbie o desenvolvimento de aplicações com MEAN Stack.
-    
-    div.button.wider.raised.darkgreen.center
-      div.center.bold(fit) Portifólio
-      paper-ripple(fit)
+          p
+            strong MEAN Stack developer
+            br
+            | Fascinado pelo avanço das tecnologias Web nos últimos anos, adotou como
+            | hobbie o desenvolvimento de aplicações com MEAN Stack.
